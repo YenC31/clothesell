@@ -10,6 +10,7 @@ export const stock = [
     rating: 4.5,
     numReviews: 10,
     desc: "high quality product",
+    oferta: false,
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const stock = [
     rating: 4.0,
     numReviews: 89,
     desc: "high quality product",
+    oferta: true,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const stock = [
     rating: 3.9,
     numReviews: 20,
     desc: "high quality product",
+    oferta: false,
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const stock = [
     rating: 4.3,
     numReviews: 22,
     desc: "high quality product",
+    oferta: true,
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ export const stock = [
     rating: 3.9,
     numReviews: 22,
     desc: "high quality product",
+    oferta: false,
   },
   {
     id: 6,
@@ -70,5 +75,6 @@ export const stock = [
     rating: 5,
     numReviews: 1000,
     desc: "high quality product",
+    oferta: true,
   },
 ];

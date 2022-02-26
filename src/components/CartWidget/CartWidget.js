@@ -7,18 +7,32 @@ import { useContext } from "react";
 const cartwidged = styled.div`
   font-size: 30px;
   color: white;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+`;
+
+const cartHidden = styled.div`
+  opacity: 0;
+  visibility: hidden;
 `;
 
 export const CartWidget = () => {
-  const { cantidadCart, totalCart } = useContext(CartContext);
+  const { cantidadCart, cart } = useContext(CartContext); //totalCart
 
   return (
-    <cartwidged>
-      <Link to="/cart">
-        <BsFillCartFill />
-        <span>{cantidadCart()}</span>
-      </Link>
-    </cartwidged>
+    <>
+      {cart.length === 0 ? (
+        <cartHidden></cartHidden>
+      ) : (
+        <cartwidged>
+          <Link to="/cart">
+            <BsFillCartFill />
+            <span>{cantidadCart()}</span>
+          </Link>
+        </cartwidged>
+      )}
+    </>
   );
 };
 //<span>{totalCart()}</span>

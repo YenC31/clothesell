@@ -1,6 +1,7 @@
 import { Item } from "../Item/Item";
 import "./ItemList.css";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 const itemlistcontainer = styled.div`
   display: flex;
@@ -33,6 +34,13 @@ const price = `
 `;
 
 export const ItemList = ({ productos }) => {
+  useEffect(() => {
+    console.log("ItemList Montado");
+
+    return () => {
+      console.log("ItemList desmontado");
+    };
+  }, []);
   return (
     <section>
       <itemlistcontainer>
@@ -44,6 +52,7 @@ export const ItemList = ({ productos }) => {
               precio={el.precio}
               img={el.img}
               descripcion={el.descripcion}
+              oferta={el.oferta}
               id={el.id}
               count={el.stock}
               brand={el.brand}
